@@ -13,8 +13,8 @@ const getPokemon = async (id) => {
 	const url = `https://pokeapi.co/api/v2/pokemon/${id}/`;
 	const r = await fetch(url);
 	poke = await r.json();
-	console.log(poke);
-	console.log(poke.sprites.other["official-artwork"]["front_default"]);
+// 	console.log(poke);
+// 	console.log(poke.sprites.other["official-artwork"]["front_default"]);
 	createPokeList(poke);
 };
 
