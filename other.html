@@ -1,0 +1,60 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<title>Pokedex</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		(function(apiKey){
+			(function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
+			v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
+				o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+				y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+				z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+	
+				// Call this whenever information about your visitors becomes available
+				// Please use Strings, Numbers, or Bools for value types.
+				pendo.initialize({
+					visitor: {
+						id:           'onboarding-vis1',   // Required if user is logged in
+						email:        'onboardZach@test.com', // Recommended if using Pendo Feedback, or NPS Email
+						full_name:    'Zoey Moe', // Recommended if using Pendo Feedback
+						role:         'Technical Success' // Optional
+	
+						// You can add any additional visitor level key-values here,
+						// as long as it's not one of the above reserved names.
+					},
+	
+					account: {
+						id:           '110', // Highly recommended
+						name:         'Zach Co'// Optional
+						//is_paying:    ''// Recommended if using Pendo Feedback
+						// monthly_value:// Recommended if using Pendo Feedback
+						// planLevel:    // Optional
+						// planPrice:    // Optional
+						// creationDate: // Optional
+	
+						// You can add any additional account level key-values here,
+						// as long as it's not one of the above reserved names.
+					}
+				});
+		})('bcd0232d-a431-47a4-402b-37d79f7237df');
+	</script>
+</head>
+<body>
+    <nav>
+        <a href="index.html"><h3 class='home'>Home</h3></a>
+        <a href="login.html"><h3 class='login'>Login</h3></a>
+    </nav>
+	<div class='pokeTop'>
+		<h1>PokeDex</h1>
+	</div>
+	<section>
+        <p><h2>Other Page</h2></p>
+        <p>This is the other page</p>
+    </section>
+    <section>
+        <button>Other button here</button>
+    </section>
+
+</body>
+</html>
