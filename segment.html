@@ -4,42 +4,13 @@
 	<title>Pokedex</title>
 	<link rel="stylesheet" href="style.css">
 	<script>
-		(function(apiKey){
-			(function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
-			v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
-				o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
-				y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
-				z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
-	
-				// Call this whenever information about your visitors becomes available
-				// Please use Strings, Numbers, or Bools for value types.
-				pendo.initialize({
-					visitor: {
-						id:           '',   // Required if user is logged in
-						email:        '', // Recommended if using Pendo Feedback, or NPS Email
-						full_name:    'zach', // Recommended if using Pendo Feedback
-						role:         'Test' // Optional
-						//testArray: 	["zach", "is", "cool"]
-
-						// You can add any additional visitor level key-values here,
-						// as long as it's not one of the above reserved names.
-					},
-	
-					account: {
-						id:           'testAccount Anon 1', // Highly recommended
-						name:         '',// Optional
-						is_paying:    true// Recommended if using Pendo Feedback
-						// monthly_value:// Recommended if using Pendo Feedback
-						// planLevel:    // Optional
-						// planPrice:    // Optional
-						// creationDate: // Optional
-	
-						// You can add any additional account level key-values here,
-						// as long as it's not one of the above reserved names.
-					}
-				});
-		})('bcd0232d-a431-47a4-402b-37d79f7237df');
-	</script>
+		!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on","addSourceMiddleware","addIntegrationMiddleware","setAnonymousId","addDestinationMiddleware"];analytics.factory=function(e){return function(){var t=Array.prototype.slice.call(arguments);t.unshift(e);analytics.push(t);return analytics}};for(var e=0;e<analytics.methods.length;e++){var key=analytics.methods[e];analytics[key]=analytics.factory(key)}analytics.load=function(key,e){var t=document.createElement("script");t.type="text/javascript";t.async=!0;t.src="https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(t,n);analytics._loadOptions=e};analytics._writeKey="aFb7t75af04AZPWk1zzIqTnbVO5m5DOQ";;analytics.SNIPPET_VERSION="4.15.3";
+		analytics.load("aFb7t75af04AZPWk1zzIqTnbVO5m5DOQ");
+		analytics.page();
+		analytics.identify("testVisitor");
+		pendo.identify('zach')
+		}}();
+</script>
 		<style>
 			ul {
 				list-style-type: none;
@@ -98,15 +69,6 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-button {
-	background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -151,7 +113,7 @@ button {
 		</ul>
     </nav>
 	<div class='pokeTop'>
-		<h1>PokeDex</h1>
+		<h1>PokeDex Segment Test</h1>
 	</div>
 	<br>
 	<br>
@@ -169,7 +131,7 @@ button {
         <p>This is the other page</p>
     </section>
     <section id='form-input'>
-        <button onclick="pendo.track('pendoTrack')">Other button here</button>
+        <button onclick='analytics.track("otherBtnSegment")'>Other button here</button>
     </section>
 	
 	<section id='form-input'>
@@ -216,7 +178,7 @@ button {
   </div>
   <br>
   <div class="row">
-    <input type="submit" value="Submit" id='btn'>
+    <input type="submit" value="Submit">
   </div>
   </form>
 </div>

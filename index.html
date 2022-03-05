@@ -13,22 +13,25 @@
 	
 				// Call this whenever information about your visitors becomes available
 				// Please use Strings, Numbers, or Bools for value types.
+				
 				pendo.initialize({
+					disableFeedback: true,
+
 					visitor: {
-						id:           'zachTest4',   // Required if user is logged in
-						email:        'zach@test.com', // Recommended if using Pendo Feedback, or NPS Email
-						full_name:    'Zach Owens', // Recommended if using Pendo Feedback
-						role:         'Technical', // Optional
-						testArray:	['zach', 'is', 'cool']
+						id:           'zachLocal1',   // Required if user is logged in
+						email:        'zowensLocal@gmail.com', // Recommended if using Pendo Feedback, or NPS Email
+						full_name:    'Zoey Moe', // Recommended if using Pendo Feedback
+						role:         'Technical Success', // Optional
+						testArray: 	["zach", "is", "cool"]
 	
 						// You can add any additional visitor level key-values here,
 						// as long as it's not one of the above reserved names.
 					},
 	
 					account: {
-						id:           '21030', // Highly recommended
-						name:         'web Co'// Optional
-						//is_paying:    ''// Recommended if using Pendo Feedback
+						id:           '110', // Highly recommended
+						name:         'Zach Co',// Optional
+						is_paying:    true// Recommended if using Pendo Feedback
 						// monthly_value:// Recommended if using Pendo Feedback
 						// planLevel:    // Optional
 						// planPrice:    // Optional
@@ -38,12 +41,38 @@
 						// as long as it's not one of the above reserved names.
 					}
 				});
-		})('032f0731-537c-474a-4569-c1b1d25d5ccf');
+		})('bcd0232d-a431-47a4-402b-37d79f7237df');
 	</script>
+	<style>
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		li {
+			float: left;
+		}
+
+		li a {
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+	</style>
 </head>
 <body>
 	<nav>
-        <a href="login.html"><h3 class='login'>Login</h3></a>
+		<ul>
+        <li><a href="login.html"><h3 class='login'>Login</h3></a></li>
+		<li><a href="other.html"><h3 class='other'>Other page</h3></a></li>
+		<li><a href="#" target="_blank" onclick="pendo.feedback.loginAndRedirect({anchor: this}); return false;"><h3 class='feedback'>Pendo Feedback</h3></a></li>
+		<li><a href=><h3 class='other'>Resource Center</h3></a></li>
+	</ul>
     </nav>
 	<div class='pokeTop'>
 		<h1>PokeDex</h1>
@@ -52,6 +81,7 @@
 	</div>
 
 	<script src="script.js"></script>
+ 
 	<!-- <div class='modal'>
 		<h1>Test</h1>
 	</div> -->
