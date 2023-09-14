@@ -169,7 +169,8 @@ button {
         <p>This is the other page</p>
     </section>
     <section id='form-input'>
-        <button onclick="pendo.track('testEvent', {'propNum': 'Math.floor(Math.random() * 10)', 'test':true })">Other button here</button>
+	<script>var myVar = Math.floor(Math.random() * 10);</script>
+        <button onclick="pendo.track('testEvent', {'propNum': myVar , 'test':true })">Other button here</button>
     </section>
 	
 	<section id='form-input'>
