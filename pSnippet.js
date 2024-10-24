@@ -34,14 +34,14 @@ console.log(monthly_value);
 						email:        'test@test.com', // Recommended if using Pendo Feedback, or NPS Email
 						full_name:    'Zach Owens', // Recommended if using Pendo Feedback
 						role:         'ETSE', // Optional
-						testArray: 	["you", "guy", "si"]
+						testArray: 	["you", "guy", "nachoes"]
 	
 						// You can add any additional visitor level key-values here,
 						// as long as it's not one of the above reserved names.
 					},
 	
 					account: {
-						id:           randomName // Highly recommended
+						id:           randomName, // Highly recommended
 						name:         randomName,// Optional
 						//is_paying:    true// Recommended if using Pendo Feedback
 						monthly_value:  monthly_value // Recommended if using Pendo Feedback
