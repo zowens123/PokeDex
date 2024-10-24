@@ -1,4 +1,23 @@
-		(function(apiKey){
+// Define a function to select a random name from a list
+function getRandomName(names) {
+    // Select a random index from the list
+    const randomIndex = Math.floor(Math.random() * names.length);
+    
+    // Return the random name
+    return names[randomIndex];
+}
+
+// Example usage:
+const names = ["zachCo", "bobCo", "cCo", "pendoCo", "afterpayCo", "frankCo", "googleCo", "friendsCo", "hudlCo", "pokeCo"];
+
+// Call the function to get a random name
+const randomName = getRandomName(names);
+console.log(randomName);
+
+var monthly_value = Math.floor(Math.random() * (450000 - 100000 + 1)) + 100000;
+console.log(monthly_value);
+
+(function(apiKey){
 			(function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=o._q||[];
 			v=['initialize','identify','updateOptions','pageLoad','track'];for(w=0,x=v.length;w<x;++w)(function(m){
 				o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
@@ -11,21 +30,21 @@
 					disableFeedback: true,
 
 					visitor: {
-						id:           'testPendo'   // Required if user is logged in
-						//email:        'test@test.com', // Recommended if using Pendo Feedback, or NPS Email
-						//full_name:    'Random', // Recommended if using Pendo Feedback
-						//role:         'Recruitin', // Optional
-						//testArray: 	["you", "guy", "si"]
+						id:           'zowens1'   // Required if user is logged in
+						email:        'test@test.com', // Recommended if using Pendo Feedback, or NPS Email
+						full_name:    'Zach Owens', // Recommended if using Pendo Feedback
+						role:         'ETSE', // Optional
+						testArray: 	["you", "guy", "si"]
 	
 						// You can add any additional visitor level key-values here,
 						// as long as it's not one of the above reserved names.
 					},
 	
 					account: {
-						id:           ' Test' // Highly recommended
-						//name:         'Allee',// Optional
+						id:           randomName // Highly recommended
+						name:         'Allee',// Optional
 						//is_paying:    true// Recommended if using Pendo Feedback
-						// monthly_value:// Recommended if using Pendo Feedback
+						monthly_value:  monthly_value // Recommended if using Pendo Feedback
 						// planLevel:    // Optional
 						// planPrice:    // Optional
 						// creationDate: // Optional
@@ -34,5 +53,5 @@
 						// as long as it's not one of the above reserved names.
 					}
 				});
-		})('032f0731-537c-474a-4569-c1b1d25d5ccf');
-		//032f0731-537c-474a-4569-c1b1d25d5ccf  Zach_Test
+})('032f0731-537c-474a-4569-c1b1d25d5ccf');
+//032f0731-537c-474a-4569-c1b1d25d5ccf  Zach_Test
