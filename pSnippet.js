@@ -30,7 +30,7 @@ console.log(monthly_value);
 					disableFeedback: true,
 
 					visitor: {
-						id:           'zowens1'   // Required if user is logged in
+						id:           'zowens1',   // Required if user is logged in
 						email:        'test@test.com', // Recommended if using Pendo Feedback, or NPS Email
 						full_name:    'Zach Owens', // Recommended if using Pendo Feedback
 						role:         'ETSE', // Optional
@@ -42,7 +42,7 @@ console.log(monthly_value);
 	
 					account: {
 						id:           randomName // Highly recommended
-						name:         'Allee',// Optional
+						name:         randomName,// Optional
 						//is_paying:    true// Recommended if using Pendo Feedback
 						monthly_value:  monthly_value // Recommended if using Pendo Feedback
 						// planLevel:    // Optional
