@@ -30,7 +30,7 @@ console.log(monthly_value);
 					disableFeedback: true,
 
 					visitor: {
-						id:           'zowens1',   // Required if user is logged in
+						id:           'zowens 1',   // Required if user is logged in
 						email:        'test@test.com', // Recommended if using Pendo Feedback, or NPS Email
 						full_name:    'Zach Owens', // Recommended if using Pendo Feedback
 						role:         'ETSE', // Optional
