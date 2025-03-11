@@ -30,11 +30,11 @@ console.log(monthly_value);
 					disableFeedback: true,
 
 					visitor: {
-						id:           'zowens 1',   // Required if user is logged in
-						email:        'test@test.com', // Recommended if using Pendo Feedback, or NPS Email
-						full_name:    'Zach Owens', // Recommended if using Pendo Feedback
-						role:         'ETSE', // Optional
-						testArray: 	["you", "guy", "nachoes"]
+						id:           'newZowens',   // Required if user is logged in
+						email:        'test123@test.com', // Recommended if using Pendo Feedback, or NPS Email
+						full_name:    'Z Owe', // Recommended if using Pendo Feedback
+						role:         'TSE', // Optional
+						testArray: 	["nice", "golf", "slack"]
 	
 						// You can add any additional visitor level key-values here,
 						// as long as it's not one of the above reserved names.
