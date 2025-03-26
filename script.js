@@ -23,9 +23,7 @@ const pokelist = document.getElementById("pokeList");
 function createPokeList(pokemon) {
 	const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
 	const pokeElement = document.createElement("div");
-	const pokeInnerHtml = `<ol class='pokeRow' onclick="selectPokemon(${
-		pokemon.id
-	})">#${pokemon.id.toString().padStart(3, "0")}: ${name}`;
+	const pokeInnerHtml = `<ol class='pokeRow' onclick="selectPokemon(${pokemon.id});pendo.pageLoad('https://zowens123.github.io/PokeDex/${pokemon.name.slice(1)}')">#${pokemon.id.toString().padStart(3, "0")}: ${name}`;
 
 	pokeElement.innerHTML = pokeInnerHtml;
 
